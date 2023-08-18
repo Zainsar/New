@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 16, 2023 at 02:12 PM
+-- Generation Time: Aug 18, 2023 at 02:15 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -18,27 +18,32 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `login`
+-- Database: `rigestration`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Table structure for table `usersinfo`
 --
 
-CREATE TABLE `users` (
-  `username` varchar(40) NOT NULL,
-  `password` varchar(40) NOT NULL
+CREATE TABLE `usersinfo` (
+  `Firstname` varchar(40) NOT NULL,
+  `Lastname` varchar(40) NOT NULL,
+  `Email` varchar(40) NOT NULL,
+  `Password` varchar(40) NOT NULL,
+  `Age` int(3) NOT NULL,
+  `Gender` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `users`
+-- Dumping data for table `usersinfo`
 --
 
-INSERT INTO `users` (`username`, `password`) VALUES
-('Tayyaba Zain', 'Haziq'),
-('Zain Sarfraz', 'Zain123');
+INSERT INTO `usersinfo` (`Firstname`, `Lastname`, `Email`, `Password`, `Age`, `Gender`) VALUES
+('Zain', 'Sarfraz', 'zainsarfraz82@gmail.com', 'Zain123', 20, 'Male'),
+('Hassan', 'Ali Khan', 'hassan@gmail.com', 'Hassan123', 30, 'Male'),
+('Tayyaba', 'Zain', 'tayyaba@gmail.com', 'tayyabazain', 20, 'Female');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
